@@ -24,6 +24,10 @@ public class BoShiYanJiuSheng implements ZhuJiao,XueSheng {
 				+ " 姓名："+name+"   |   年龄："+age+"   |   性别："+sex+"\n"
 				+"2020年度结余"+this.balance*12+"  | 已缴纳学费"+this.s;
 	}
+	public String toString1() {
+		return"==========个人信息:=========="+"\n"
+				+ " 姓名："+name+"   |   年龄："+age+"   |   性别："+sex;
+	}
 	
 	//实现两接口
 	public float getTuition(float t) {
@@ -88,6 +92,12 @@ public class BoShiYanJiuSheng implements ZhuJiao,XueSheng {
 		System.out.println("已缴纳学费："+s+"   |剩余应缴学费"+sy);
 	}
 	
+	
+	public void In (float x,float z) throws YiChang{
+		if (x<=2000&&z<=0) {
+			throw new YiChang(x,z);
+		}	
+	}
 	
 	
 	
